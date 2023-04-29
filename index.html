@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://kit.fontawesome.com/65a7ddece6.css"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="index.css" />
+    <script
+      src="https://kit.fontawesome.com/65a7ddece6.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="dropdown">
+      <div class="cent">
+        
+        <div class="dro">
+          <button onclick="myFunction()" class="dropbtn">Cities</button>
+          <div id="myDropdown" class="dropdown-content">
+            <a value="Chandigarh" href="#"  onclick="stcha()">Chandigarh</a>
+            <a value="Delhi" href="#" onclick="stdel()">Delhi</a>
+            <a value="bengaluru" href="#" onclick="stuttra()">bengaluru</a>
+            <a value="Mumbai" href="#" onclick="stmum()">Mumbai</a>
+          </div>
+        </div>
+        <div class="checkbox-wrapper-25">
+          <input type="checkbox" onclick="dark()">
+        </div>
+      </div>
+    </div>
+    <div class=" light">
+      <div class="outer">
+        <div class="box">
+          <div class="wave1"></div>
+          <div class="wave2"></div>
+          <div class="wave3"></div>
+          <div id="weathericon">
+            <i
+              class="fa-sharp fa-solid fa-sun"
+              style="color: rgb(255, 255, 255)"
+            ></i>
+          </div>
+          <div class="info">
+            <h2 class="location">
+              <i class="fa-solid fa-street-view ic"></i>
+              <p class="locin">state,country</p>
+            </h2>
+            <p id="date">wed|oct23|10:49</p>
+            <h1 class="temp">temp&deg;</h1>
+            <h3 class="min_max">Min &deg; | Max &deg;</h3>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <script src="indexjs.js"></script>
+  </body>
+</html>

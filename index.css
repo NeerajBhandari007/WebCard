@@ -1,0 +1,362 @@
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap");
+* {
+  font-family: "Source Sans Pro", sans-serif;
+}
+body {
+  padding: 0px;
+  margin: 0px;
+  background-color: aliceblue;
+}
+
+.outer {
+  padding-top: 50px;
+  background-color: aliceblue;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 83vh;
+}
+.box {
+  background-color: rgb(155, 191, 221);
+  height: 380px;
+  width: 250px;
+  display: flex;
+  position: absolute;
+  overflow: hidden;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
+    rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+}
+#weathericon {
+  display: flex;
+  height: 50%;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  font-size: 4rem;
+}
+.wave1 {
+  background-color: rgb(167, 205, 236);
+  position: absolute;
+  bottom: -120px;
+  width: 300px;
+  height: 335px;
+  border-radius: 180px;
+  z-index: 1;
+  animation-name: wave1;
+}
+.wave2 {
+  background-color: rgb(185, 222, 255);
+  position: absolute;
+  bottom: -125px;
+  width: 300px;
+  height: 320px;
+  border-radius: 150px;
+  z-index: 2;
+  animation-name: wave2;
+}
+.wave3 {
+  background-color: rgb(195, 228, 255);
+  position: absolute;
+  bottom: -130px;
+  width: 300px;
+  height: 305px;
+  border-radius: 140px;
+  z-index: 3;
+  animation-name: wave3;
+}
+.wave1,
+.wave2,
+.wave3 {
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+@keyframes wave1 {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes wave2 {
+  0% {
+    transform: rotate(45deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes wave3 {
+  0% {
+    transform: rotate(100deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.info {
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+}
+.location,
+locin {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  font-size: 1.9rem;
+  padding: 0px;
+  margin: 0px;
+  text-align: center;
+}
+p {
+  padding: 0px;
+  margin: 0px;
+  padding-left: 5px;
+}
+#date {
+  color: rgb(84, 84, 84);
+  margin: 0px;
+  text-align: center;
+  padding-top: 5px;
+  font-size: 0.9rem;
+}
+.temp {
+  text-align: center;
+  font-size: 1.9rem;
+  font-size: 1.9rem;
+  margin: 0px;
+  margin-top: 21px;
+}
+.min_max {
+  color: rgb(84, 84, 84);
+  margin: 0px;
+  text-align: center;
+  padding-top: 5px;
+  font-size: 0.9rem;
+  font-weight: 100;
+}
+.ic {
+  animation-name: icon;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  position: relative;
+}
+@keyframes icon {
+  0% {
+    left: -4px;
+    top: 2px;
+  }
+  50% {
+    left: 6px;
+    top: 2px;
+  }
+  100% {
+    left: -4px;
+    top: 2px;
+  }
+}
+button {
+  color: #090909;
+  padding: 5px 20px;
+  font-size: 19px;
+  font-weight: 600;
+  border-radius: 0.5em;
+  background: #e8e8e8;
+  border: 1px solid #e8e8e8;
+  transition: all 0.3s;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  cursor: pointer;
+}
+.cent {
+  margin: 0 auto;
+  width: fit-content;
+  display: flex;
+  justify-content: space-between;
+}
+button:active {
+  color: #666;
+  
+}
+
+.dropdown {
+  padding-top: 30px;
+  width: 100%;
+  background-color: aliceblue;
+
+  display: inline-block;
+}
+.dro {
+  position: relative;
+  width: fit-content;
+}
+.dropdown-content {
+  display: none;
+  position: absolute;
+  left: -22px;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+
+  border-radius: 10px;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  border-radius: 0.5em;
+}
+
+.dropdown-content a:hover {
+  border-radius: 0.5em;
+  background-color: #ddd;
+}
+
+.show {
+  display: block;
+}
+
+.checkbox-wrapper-25 input[type="checkbox"] {
+  background-image: -webkit-linear-gradient(
+      hsla(0, 0%, 0%, 0.1),
+      hsla(0, 0%, 100%, 0.1)
+    ),
+    -webkit-linear-gradient(left, #232323 50%, aliceblue 50%);
+  background-size: 100% 100%, 200% 100%;
+  background-position: 0 0, 15px 0;
+  border-radius: 25px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  cursor: pointer;
+  height: 25px;
+  padding-right: 25px;
+  width: 75px;
+  -webkit-appearance: none;
+  -webkit-transition: 0.25s;
+}
+
+.checkbox-wrapper-25 input[type="checkbox"]:after {
+  background-color: #eee;
+  background-image: -webkit-linear-gradient(
+    hsla(0, 0%, 100%, 0.1),
+    hsla(0, 0%, 0%, 0.1)
+  );
+  border-radius: 25px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  content: "";
+  display: block;
+  height: 25px;
+  width: 50px;
+}
+
+.checkbox-wrapper-25 input[type="checkbox"]:checked {
+  background-position: 0 0, 35px 0;
+  padding-left: 25px;
+  padding-right: 0;
+}
+.checkbox-wrapper-25 {
+  margin-left: 150px;
+}
+.dark {
+  background-color: #232323;
+}
+
+
+
+
+@property --rotate {
+  syntax: "<angle>";
+  initial-value: 132deg;
+  inherits: false;
+}
+
+:root {
+  --card-height: 65vh;
+  --card-width: calc(var(--card-height) / 1.5);
+}
+
+body {
+  background: aliceblue;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  box-sizing: border-box;
+}
+
+.card {
+  margin-top: 85px;
+  width: var(--card-width);
+  height: var(--card-height);
+  padding: 3px;
+  position: relative;
+  border-radius: 6px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  display: flex;
+  font-size: 1.5em;
+  cursor: pointer;
+  font-family: cursive;
+}
+
+
+
+.card::before {
+  content: "";
+  width: 260px;
+  height: 392px;
+  border-radius: 10px;
+  background-image: linear-gradient(
+    var(--rotate),
+    #5ddcff,
+    #3c67e3 43%,
+    #4e00c2
+  );
+  position: absolute;
+  z-index: -1;
+  top: 12%;
+  animation: spin 2.5s linear infinite;
+}
+
+.card::after {
+  position: absolute;
+  content: "";
+  top: calc(var(--card-height) / 6);
+  left: 0;
+  right: 0;
+  z-index: -1;
+  height: 100%;
+  width: 100%;
+  margin: 0 auto;
+  transform: scale(0.8);
+  filter: blur(calc(var(--card-height) / 6));
+  background-image: linear-gradient(
+    var(--rotate),
+    #5ddcff,
+    #3c67e3 43%,
+    #4e00c2
+  );
+  opacity: 1;
+  transition: opacity 0.5s;
+  animation: spin 2.5s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    --rotate: 0deg;
+  }
+  100% {
+    --rotate: 360deg;
+  }
+}
+
