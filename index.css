@@ -271,7 +271,7 @@ button:active {
   background-color: #232323;
 }
 
-
+/* 
 
 
 @property --rotate {
@@ -324,7 +324,7 @@ body {
   );
   position: absolute;
   z-index: -1;
-  top: 12%;
+  top: 15.5%;
   animation: spin 2.5s linear infinite;
 }
 
@@ -358,5 +358,5 @@ body {
   100% {
     --rotate: 360deg;
   }
-}
+} */
 
